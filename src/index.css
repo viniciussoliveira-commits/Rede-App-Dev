@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+/* 2. IMPORTAÇÃO DAS FONTES PREMIUM */
+
+/* 1. MOTORES DO TAILWIND (NÃO APAGUE ESTES!) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. CONFIGURAÇÕES BASE */
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a18;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. PADRONIZAÇÃO DE TÍTULOS SERIFADOS */
+h1,
+h2,
+h3,
+.font-serif {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* 5. SCROLLBAR PERSONALIZADA */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ece9e3;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a84c;
+}
+
+/* 6. CLASSES AUXILIARES DO DESIGN SYSTEM */
+.badge-premium {
+  background: linear-gradient(90deg, #c9a84c, #e8c96b);
+  color: #3d2e00;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 99px;
+}
+
+.shadow-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-modal {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* 7. ESTILOS DE FORMULÁRIO */
+.fg {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.fg label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #5a5a52;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.fg input {
+  padding: 9px 11px;
+  border: 1.5px solid #ece9e3;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: 0.15s;
+}
+.fg input:focus {
+  border-color: #c9a84c;
+  outline: none;
+  background: #fffef9;
+}
+
+/* 8. BOTÕES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+}
+.btn-gold {
+  background: #c9a84c;
+  color: white;
+}
+.btn-gold:hover {
+  background: #b8973e;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #5a5a52;
+  border: 1.5px solid #ece9e3;
+}
+
+/* 9. ANIMAÇÕES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease forwards;
+}
