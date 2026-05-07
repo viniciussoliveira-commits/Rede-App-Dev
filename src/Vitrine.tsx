@@ -1,3 +1,4 @@
+//teste commit
 import React, { useEffect, useState, useRef } from 'react';
 import { db } from './firebase';
 import { collection, getDocs } from 'firebase/firestore';
